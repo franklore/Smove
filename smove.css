@@ -22,6 +22,7 @@ body {
 
 #start span {
     user-select: none;
+    cursor: default;
 }
 
 
@@ -31,7 +32,7 @@ body {
 }
 
 #start:active {
-    background-color: rgba(0,32,32,0.5);
+    background-color: rgba(16,16,16,0.5);
     color: grey;
 }
 
