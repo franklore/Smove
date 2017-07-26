@@ -1,0 +1,41 @@
+#cv {
+    display: block;
+    margin: auto;
+}
+
+body {
+    background-color: black;
+}
+
+#start {
+    position: absolute;
+    left: 35%;
+    width: 30%;
+    top: 61.8%;
+    height: 10%;
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    text-align: center;
+    font-size: 3em;
+    color: grey;
+}
+
+#start span {
+    user-select: none;
+}
+
+
+#start:hover {
+    background-color: rgba(32,32,32,0.5);
+    color: grey;
+}
+
+#start:active {
+    background-color: rgba(0,32,32,0.5);
+    color: grey;
+}
+
+#restart {
+    visibility: hidden;
+}
+
