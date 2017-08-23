@@ -1,9 +1,9 @@
-function Enemy() {
+function Enemy(enemySpeed) {
     start = function() {
         this.way = Math.floor(Math.random() * mapAttr.blockNumber);
         this.direction = Math.round(Math.random());
         this.position = Math.round(Math.random()); 
-        this.speed = 1.5;
+        this.speed = enemySpeed;
         this.color = "#200";
 
         if (this.position) {
@@ -27,7 +27,8 @@ function Enemy() {
         }
         if (Math.sqrt((this.x - player.x) * (this.x - player.x) + (this.y - player.y) * (this.y - player.y)) <
         (this.size + player.size) ) {
-            mapAttr.lose = 1;
+            mapAttr.state = 2;
+            uiRenderer();
         }
     }
     return new GameObject(start, update);
@@ -49,6 +50,7 @@ function Food() {
         if (Math.sqrt((this.x - player.x) * (this.x - player.x) + (this.y - player.y) * (this.y - player.y)) <
         (this.size + player.size) ) {
             player.score += 1;
+            uiRenderer();
             controller.haveFood = false;
             objectCollection.objectList.splice(objectCollection.objectList.indexOf(this), 1);
         }

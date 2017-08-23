@@ -6,12 +6,16 @@
     <link rel="stylesheet" type="text/css" href="smove.css">
 </head>
 <body>
-    <canvas id = 'cv' width = 600 height = 600></canvas>
-    <div id = 'restart' class = 'button'>restart</div>
-    <div id = 'start' class = 'button'><span>start</span><div>
+    <div id = 'canvas'>
+        <canvas id = 'bg' width = 600 height = 600></canvas>
+        <canvas id = 'cv' width = 600 height = 600></canvas> 
+        <canvas id = 'ui' width = 600 height = 600></canvas>
+    </div>
+    <script src = 'control.js'></script>
     <script src = 'graphic.js'></script>
-    <script src = 'smove.js'></script>
+    <script src = 'render.js'></script>
     <script src = 'prefab.js'></script>
+    <script src = 'objects.js'></script>
     <script src = 'main.js'></script>
 </body>
 </html>
